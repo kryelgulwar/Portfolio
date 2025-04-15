@@ -15,7 +15,7 @@ function App() {
   // Smooth scroll implementation
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
+      anchor.addEventListener("click", function (this: HTMLAnchorElement, e: MouseEvent) {
         e.preventDefault()
         const targetId = this.getAttribute("href")
         if (targetId) {
