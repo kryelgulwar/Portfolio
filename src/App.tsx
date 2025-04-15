@@ -14,17 +14,28 @@ import Footer from "./components/layout/Footer"
 function App() {
   // Smooth scroll implementation
   useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (this: HTMLAnchorElement, e: MouseEvent) {
-        e.preventDefault()
-        const targetId = this.getAttribute("href")
-        if (targetId) {
-          document.querySelector(targetId)?.scrollIntoView({
-            behavior: "smooth",
-          })
-        }
-      })
+    const handleClick = (e: MouseEvent) => {
+      e.preventDefault()
+      const target = e.currentTarget as HTMLAnchorElement
+      const targetId = target.getAttribute("href")
+      if (targetId) {
+        document.querySelector(targetId)?.scrollIntoView({
+          behavior: "smooth",
+        })
+      }
+    }
+
+    const anchors = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
+    anchors.forEach(anchor => {
+      anchor.addEventListener("click", handleClick)
     })
+
+    // Cleanup function
+    return () => {
+      anchors.forEach(anchor => {
+        anchor.removeEventListener("click", handleClick)
+      })
+    }
   }, [])
 
   return (
