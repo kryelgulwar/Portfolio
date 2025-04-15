@@ -17,9 +17,15 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: "John Doe | Full Stack Developer",
   description: "Portfolio of John Doe, a Full Stack Developer specializing in React, Next.js, and Node.js",
     generator: 'v0.dev'
+=======
+  title: "Karan Rao Yelgulwar | Data analyst",
+  description: "Portfolio of Karan Rao Yelgulwar, Data Analyst Transforming complex data into actionable insights. Specialized in sports event operations and logistics analytics.",
+    generator: 'Karan Rao'
+>>>>>>> 69f928f7320476072ebc34d77f427d1887fe9cb7
 }
 
 export default function RootLayout({
@@ -30,7 +36,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+<<<<<<< HEAD
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+=======
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+>>>>>>> 69f928f7320476072ebc34d77f427d1887fe9cb7
           <div className="min-h-screen bg-background text-foreground">
             <Navigation />
             <main>{children}</main>

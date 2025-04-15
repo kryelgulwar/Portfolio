@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Data Analyst Portfolio
 
 A modern, responsive portfolio website built with React and Vite, showcasing data analysis projects and professional experience.
@@ -92,3 +93,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+=======
+# Portfolio
+Karan Rao Yelgulwar
+>>>>>>> 69f928f7320476072ebc34d77f427d1887fe9cb7

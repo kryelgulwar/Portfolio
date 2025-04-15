@@ -1,12 +1,29 @@
 "use client"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from "react"
+>>>>>>> 69f928f7320476072ebc34d77f427d1887fe9cb7
 
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme()
+<<<<<<< HEAD
+=======
+  const [mounted, setMounted] = useState(false)
+
+  // Avoid hydration mismatch by only rendering after component is mounted
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return <Button variant="ghost" size="icon" className="h-9 w-9 opacity-0" />
+  }
+>>>>>>> 69f928f7320476072ebc34d77f427d1887fe9cb7
 
   return (
     <DropdownMenu>
